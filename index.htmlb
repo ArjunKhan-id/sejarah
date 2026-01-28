@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jejak Kerajaan Islam Kalimantan - Game Sejarah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-crown"></i> Jejak Kerajaan Islam Nusantara</h1>
+            <p>Game Interaktif Edukasi Sejarah - Telusuri peninggalan kerajaan-kerajaan Islam di Nusantara</p>
+  <p>Kelompok Kalimantan (5)</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="game-info">
+            <div class="info-box">
+                <h3>LEVEL</h3>
+                <p id="level">1</p>
+            </div>
+            <div class="info-box">
+                <h3>SKOR</h3>
+                <p id="score">0</p>
+            </div>
+            <div class="info-box">
+                <h3>PROGRES KUIS</h3>
+                <p id="quiz-progress">0/10</p>
+            </div>
+            <div class="info-box">
+                <h3>WAKTU</h3>
+                <p id="timer">00:00</p>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="tab-container">
+                <div class="tab active" data-tab="peta">Peta Interaktif</div>
+                <div class="tab" data-tab="kuis">Kuis Sejarah</div>
+                <div class="tab" data-tab="timeline">Timeline</div>
+                <div class="tab" data-tab="about">Tentang</div>
+            </div>
+
+            <div id="peta-content" class="content active">
+                <h2>Peta Kerajaan Islam Nusantara</h2>
+                <p>Klik pada titik di peta untuk mempelajari informasi tentang kerajaan-kerajaan Islam di Nusantara.</p>
+                
+                <div class="map-container">
+                    <!-- Titik-titik kerajaan akan ditambahkan dengan JavaScript -->
+                </div>
+                
+                <div class="kingdom-info" id="kingdom-info">
+                    <!-- Informasi kerajaan akan dimuat di sini -->
+                </div>
+            </div>
+
+            <div id="kuis-content" class="content">
+                <div class="quiz-container">
+                    <h2>Kuis Kerajaan Islam Nusantara</h2>
+                    <p>Uji pengetahuan sejarahmu dengan menjawab pertanyaan-pertanyaan berikut!</p>
+                    
+                    <div class="question-box">
+                        <div class="question-number">Pertanyaan <span id="current-question">1</span>/10</div>
+                        <div class="question-text" id="question-text">Memuat pertanyaan...</div>
+                        
+                        <div class="options-container" id="options-container">
+                            <!-- Opsi jawaban akan dimuat di sini -->
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-buttons">
+                        <button class="btn btn-secondary" id="prev-btn">
+                            <i class="fas fa-arrow-left"></i> Sebelumnya
+                        </button>
+                        <button class="btn btn-primary" id="next-btn">
+                            Selanjutnya <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                            <i class="fas fa-paper-plane"></i> Kirim Jawaban
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="timeline-content" class="content">
+                <h2>Timeline Kerajaan Islam Nusantara</h2>
+                <p>Jejak sejarah perkembangan kerajaan-kerajaan Islam di Nusantara dari masa ke masa.</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline">
+                        <!-- Timeline items akan ditambahkan dengan JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="about-content" class="content">
+                <div class="about-container">
+                    <h2>Tentang Game Ini</h2>
+                    <p>Game interaktif "Jejak Kerajaan Islam Nusantara" dikembangkan untuk membantu siswa SMA memahami sejarah perkembangan kerajaan-kerajaan Islam di Nusantara dengan cara yang lebih menarik dan interaktif.</p>
+                    
+                    <p>Materi dalam game ini mencakup kurikulum Sejarah Indonesia kelas X dan XI SMA tentang perkembangan Islam di Nusantara, meliputi kerajaan-kerajaan penting seperti Samudera Pasai, Malaka, Demak, Mataram Islam, Banten, Gowa-Tallo, Ternate-Tidore, dan lainnya.</p>
+                    
+                    <h3 style="margin-top: 30px;">Daftar Kerajaan Islam Nusantara</h3>
+                    
+                    <div class="kingdom-grid">
+                        <!-- Kartu kerajaan akan ditambahkan dengan JavaScript -->
+                    </div>
+                    
+                    <div style="margin-top: 40px; padding: 20px; background-color: #f0f7ff; border-radius: 10px;">
+                        <h3 style="color: var(--primary);">Untuk Guru dan Siswa</h3>
+                        <p>Game ini dapat digunakan sebagai media pembelajaran mandiri, bahan pengayaan, atau alat evaluasi. Semua kode sumber tersedia di GitHub dan dapat dimodifikasi sesuai kebutuhan pembelajaran.</p>
+                        <a href="https://github.com" target="_blank" class="btn btn-primary" style="margin-top: 15px;">
+                            <i class="fab fa-github"></i> Lihat Kode di GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Game Interaktif "Jejak Kerajaan Islam Nusantara" - Media Pembelajaran Sejarah SMA</p>
+            <p>Dikembangkan untuk pembelajaran sejarah dengan tema Kerajaan Islam di Nusantara</p>
+            <p><a href="https://github.com" target="_blank" class="github-link"><i class="fab fa-github"></i> Kode Sumber di GitHub</a></p>
+            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">&copy; 2023 - Pendidikan Sejarah Indonesia</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
